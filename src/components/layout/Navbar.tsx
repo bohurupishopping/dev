@@ -45,42 +45,42 @@ export default function Navbar() {
         isScrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold text-primary flex items-center space-x-2">
+      <div className="container mx-auto px-4 py-2">
+        <div className="flex items-center justify-between max-w-5xl mx-auto">
+          <a href="#" className="text-xl font-bold text-primary flex items-center space-x-2">
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">Bohurupi</span>
             <span>Dev</span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <ul className="flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-4">
+            <ul className="flex space-x-2">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <a 
                     href={item.href}
-                    className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-full hover:bg-muted"
                   >
                     {item.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <Button onClick={toggleTheme} variant="ghost" size="icon" className="rounded-full">
-              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            <Button onClick={toggleTheme} variant="ghost" size="icon" className="rounded-full ml-2">
+              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
-            <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+            <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-full text-sm">
               Get Started
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-4 md:hidden">
+          <div className="flex items-center space-x-2 md:hidden">
             <Button onClick={toggleTheme} variant="ghost" size="icon" className="rounded-full">
-              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
-            <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <Button onClick={toggleMobileMenu} variant="ghost" size="icon" className="rounded-full">
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
@@ -96,21 +96,21 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-background/95 backdrop-blur-md"
           >
-            <nav className="container mx-auto px-4 py-6">
-              <ul className="flex flex-col space-y-4">
+            <nav className="container mx-auto px-4 py-4 max-w-5xl">
+              <ul className="flex flex-col space-y-2">
                 {navItems.map((item) => (
                   <li key={item.name}>
                     <a 
                       href={item.href}
                       onClick={closeMobileMenu}
-                      className="block text-lg font-medium text-foreground/80 hover:text-foreground transition-colors"
+                      className="block px-4 py-2 text-base font-medium text-foreground/80 hover:text-foreground transition-colors rounded-full hover:bg-muted"
                     >
                       {item.name}
                     </a>
                   </li>
                 ))}
-                <li className="pt-4">
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+                <li className="pt-2">
+                  <Button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-full">
                     Get Started
                   </Button>
                 </li>
