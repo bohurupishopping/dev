@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/stockmap/privacy", "destination": "/index.html" },
+    { "source": "/stockmap/about", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
