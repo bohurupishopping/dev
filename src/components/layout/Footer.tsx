@@ -105,7 +105,7 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <p className="text-xs text-muted-foreground mb-4 sm:mb-0">
-            &copy; {currentYear} Bohurupi Dev. All rights reserved. Crafted with passion.
+            &copy; {currentYear} Bohurupi Shopping & Servies. All rights reserved. Crafted with passion.
           </p>
           <div className="flex space-x-4 sm:space-x-6">
             <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
